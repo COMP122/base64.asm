@@ -18,6 +18,8 @@ For more information see:
 1. [COMP122 Base64 Table](https://docs.google.com/spreadsheets/d/1Jlo2GmWvl4bxlPN9GzXsKnl4acyppBWYQjX2S_Bm9oQ)
 2. [Base64: Operations](https://docs.google.com/presentation/d/16x4BQnHXk6GkzAkFIvRYphJ2fPAskqk7GWB1sYRuDbY)
 
+## Deliverable:
+* a completed version of the encode.asm file
 
 ## Encode: Algorithmic Approach
 
