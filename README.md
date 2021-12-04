@@ -53,7 +53,7 @@ To test your program, perform the following steps using the MARS GUI:
   6. review your output
   7. validate that the output is '+sre'
 
-If all goes well, your test program should print out the string "+sqe". This output is based upon the initial values assigned to the in_buffer array in may.  Both the intial values and the expected output is based upon the slides presented in class.
+If all goes well, your test program should print out the string "+sre". This output is based upon the initial values assigned to the in_buffer array in may.  Both the intial values and the expected output is based upon the slides presented in class.
 
 You can continue testing your programing by modifying the values associated with the in_buffer.
 
