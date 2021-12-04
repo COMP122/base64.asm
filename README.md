@@ -1,7 +1,7 @@
 # Base64 Encoding and Decoding
 
 ## Overview
-Base64 is widely used encoding scheme to send binary data across the Internet. For example, to send an JPEG image in email, the JPEG image is first encoded into base64 and written to a file.  This base64-based file is then sent as an attachment to an email message.  Your email program can automatically decode the attachment and render the original JPEG image for proper view.
+Base64 is widely used encoding scheme to send binary data across the Internet. For example, to send an JPEG image in email, the JPEG image is first encoded into base64 and written to a file.  This base64-based file is then sent as an attachment within an email message.  Your email program can automatically decode the attachment and render the original JPEG image for proper view.
 
 An assemble language is an ideal language to implement the 'base64' encoding algorithm for two primary reasons.  First, the algorithm requires efficient bit-wise manipulations on the raw data. Second, the execution speed of the resulting program is significant faster as compared to an equivalent program written in a high-level langauge.
 
@@ -22,8 +22,8 @@ For more information see:
 ## Encode: Algorithmic Approach
 
 The base64 program being developed here is composed of the following files:
-   1.  main.asm: defines the "main" routine that performs file I/O and calls the "encode" 
-   2.  syscall_macros.asm: a set of macros to ease the use of various calls to the OS
+   1.  main.asm: defines the "main" routine that performs file I/O and calls the "encode" subroutine
+   2.  syscall_macros.asm: a set of macros to ease the use of various OS system calls
    3.  mapping.asm: includes the "encode_lookup" routine that maps a 6-bit value to an 8-bit value
    4.  padding.asm: defines the "padding" routine that handles the special case for base64 encoding
    5.  encode.asm: a template file for you to use to complete the assignment
@@ -48,10 +48,11 @@ To test your program, perform the following steps using the MARS GUI:
   3. open "encode.asm"
   4. assemble the program
   5. run the program
-  6. review your output.
-  7. validate that you get an output of '+sre'
+  6. review your output
+  7. validate that the output is '+sre'
 
-If all goes well, your test program shuld print out the string "+sqe". 
+If all goes well, your test program should print out the string "+sqe". This output is based upon the initial values assigned to the in_buffer array in may.  Both the intial values and the expected output is based upon the slides presented in class.
+
 You can continue testing your programing by modifying the values associated with the in_buffer.
 
 To generate more test date, you can run the following commands on the CLI of your computer.  (I presume that you have the base64 program already on your computer. If not, you can use the base64 program on ssh.sandbox.csun.edu)
@@ -72,9 +73,9 @@ Place the values of "abc" as your values for in_buffer.
 When you run the program, you should obtain the output of "YWJj"
 
 ## Encode: Validate testing
-You can now do further testing to validate your implementation of files via the CLI.
+You can now do further testing to validate your implementation by using larger input.  The best way to perform this testing/validatee is via the CLI.
 
-The output of the following first two commands should be identical[^1].  The outputs have been placed into two files, and then compared via the `diff` command.  Unfortunately, Mars does not allow superfluous warnings to be filtered.  Hence, the output from the Mars need to be filtered by the `grep` command.
+The output of the following first two commands should be identical.  The outputs have been placed into two files, and then compared via the `diff` command.  Unfortunately, Mars does not allow superfluous warnings to be filtered.  Hence, the output from the Mars need to be filtered by the `grep` command.
   ```
   $ cat encode.asm | base64 > valid_result
   $ cat encode.asm | java -jar Mars4_5.jar sm nc main.asm > my_result
