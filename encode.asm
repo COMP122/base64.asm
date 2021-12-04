@@ -42,7 +42,7 @@ test_out_buffer:
 	.align 2    # Force alignment on a word boundary
 answer:	.byte '+'  # # Create a buffer that holds the answer the test case
         .byte 's'
-        .byte 'q'
+        .byte 'r'
         .byte 'e'
         .byte 0x00  # Provide an extra Null byte
 
