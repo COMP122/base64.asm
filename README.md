@@ -14,8 +14,9 @@ Your task is to complete the development of the base64 program that is written u
 For more information see:
 
 1. $ man base64
-1. https://en.wikipedia.org/wiki/Base64
-1. https://docs.google.com/spreadsheets/d/1Jlo2GmWvl4bxlPN9GzXsKnl4acyppBWYQjX2S_Bm9oQ/edit#gid=0
+1. [Wikipedia Base64](https://en.wikipedia.org/wiki/Base64)
+1. [COMP122 Base64 Table](https://docs.google.com/spreadsheets/d/1Jlo2GmWvl4bxlPN9GzXsKnl4acyppBWYQjX2S_Bm9oQ)
+2. [Base64: Operations](https://docs.google.com/presentation/d/16x4BQnHXk6GkzAkFIvRYphJ2fPAskqk7GWB1sYRuDbY)
 
 
 ## Encode: Algorithmic Approach
