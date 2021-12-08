@@ -48,7 +48,7 @@ main:       nop
         
         # t6: &in_buffer
         # t7: &out_buffer
-        # t8: bytes_read:
+        # t8: bytes_read
         # t9: constant 3
             
         # Initialize
@@ -60,7 +60,7 @@ main:       nop
 
         #########################
 _again: bne $t8, 3, _end_while       # while (bytes_read == 3) {
-          li $v0, 14                 #   count = file_read(0, &buffer, 3);
+          li $v0, 14                 #   bytes_read = file_read(0, &in_buffer, 3);
           li $a0, 0
           move $a1, $t6            
           move $a2, $t9              
@@ -104,7 +104,7 @@ _done:  halt()                       # exit 0;
 ##
 ##   bytes_read = three;
 ##   while (bytes_read == 3) {
-##       count = file_read(0, &in_buffer, three);
+##       bytes_read = file_read(0, &in_buffer, three);
 ##       if (bytes_read == three) {
 ##         encode(&in_buffer, &out_buffer);
 ##         print("%s", out_buffer);
