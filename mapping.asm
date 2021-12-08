@@ -9,17 +9,18 @@
 #   decode_compute:
 #   decode_lookup:
 
-	.data      
+         .data      
 base64_table:           # The following defines the lookup table for base64
 	.ascii "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-     .ascii "abcdefghijklmnopqrstuvwxyz"
-     .ascii "0123456789"
-     .ascii "+/"
+        .ascii "abcdefghijklmnopqrstuvwxyz"
+        .ascii "0123456789"
+        .ascii "+/"
+        .asciiz ""
      
 	.text
 
     .macro encode_lookup(%result, %table, %index)
-        lb  %result, %table(%index)
+        lb  %result, %table(%index)     
     .end_macro
 
     .macro encode_compute(%result, %index)
